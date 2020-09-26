@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Application;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.HttpsPolicy;
@@ -13,6 +14,7 @@ using Microsoft.Extensions.Logging;
 using NSwag;
 using NSwag.Generation.Processors.Security;
 using Persistence;
+using WebUI.Middleware;
 
 namespace WebUI
 {
@@ -33,10 +35,13 @@ namespace WebUI
             // Adding In Memory Database
             services.AddPersistence(Configuration);
 
+            // Adding Application Layer
+            services.AddApplication();
+
             // 2. - Service to generate Swagger 3 Documentation
             services.AddOpenApiDocument(configure =>
             {
-                configure.Title = "Tollbooth";
+                configure.Title = "TollBooth";
                 // TODO: Adjust based on our Security
                 configure.OperationProcessors.Add(new OperationSecurityScopeProcessor("JWT Token"));
                 configure.DocumentProcessors.Add(
@@ -58,6 +63,7 @@ namespace WebUI
                 app.UseDeveloperExceptionPage();
             }
 
+            app.UseCustomExceptionHandler();
             app.UseHttpsRedirection();
 
             // 2. - Register Swagger Documentation

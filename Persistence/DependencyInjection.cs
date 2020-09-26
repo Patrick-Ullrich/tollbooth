@@ -1,4 +1,5 @@
-﻿using Microsoft.EntityFrameworkCore;
+﻿using Application.Common.Interfaces;
+using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using System;
@@ -13,6 +14,8 @@ namespace Persistence
         {
             services.AddDbContext<TollBoothDBContext>(options =>
                 options.UseInMemoryDatabase(databaseName: "TollBoothDatabase"));
+
+            services.AddScoped<ITollBoothDBContext>(provider => provider.GetService<TollBoothDBContext>());
 
             return services;
         }

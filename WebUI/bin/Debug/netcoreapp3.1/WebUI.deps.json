@@ -24,6 +24,7 @@
     ".NETCoreApp,Version=v3.1": {
       "WebUI/1.0.0": {
         "dependencies": {
+          "Application": "1.0.0",
           "NSwag.AspNetCore": "13.7.4",
           "Persistence": "1.0.0",
           "Microsoft.AspNetCore.Antiforgery": "3.1.0.0",
@@ -1624,6 +1625,18 @@
           "System.Xml.XPath": "4.0.1"
         }
       },
+      "Application/1.0.0": {
+        "dependencies": {
+          "Domain": "1.0.0",
+          "Microsoft.EntityFrameworkCore": "3.1.8"
+        },
+        "runtime": {
+          "Application.dll": {}
+        },
+        "compile": {
+          "Application.dll": {}
+        }
+      },
       "Domain/1.0.0": {
         "runtime": {
           "Domain.dll": {}
@@ -1634,7 +1647,7 @@
       },
       "Persistence/1.0.0": {
         "dependencies": {
-          "Domain": "1.0.0",
+          "Application": "1.0.0",
           "Microsoft.EntityFrameworkCore": "3.1.8",
           "Microsoft.EntityFrameworkCore.InMemory": "3.1.8"
         },
@@ -4106,6 +4119,11 @@
       "sha512": "sha512-FLhdYJx4331oGovQypQ8JIw2kEmNzCsjVOVYY/16kZTUoquZG85oVn7yUhBE2OZt1yGPSXAL0HTEfzjlbNpM7Q==",
       "path": "system.xml.xpath.xdocument/4.0.1",
       "hashPath": "system.xml.xpath.xdocument.4.0.1.nupkg.sha512"
+    },
+    "Application/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     },
     "Domain/1.0.0": {
       "type": "project",

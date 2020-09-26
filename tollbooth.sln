@@ -17,6 +17,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Domain", "Domain\Domain.csp
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Persistence", "Persistence\Persistence.csproj", "{003865B1-BBE9-4A56-8643-5E39E590B2A2}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{98B2303C-05BB-4CC8-99DC-C0C46039AA57}"
+	ProjectSection(SolutionItems) = preProject
+		README.md = README.md
+		TollBooth.pptx = TollBooth.pptx
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Application", "Application\Application.csproj", "{770C1712-D80F-4165-B919-BE931CE4FDCF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -35,6 +43,10 @@ Global
 		{003865B1-BBE9-4A56-8643-5E39E590B2A2}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{003865B1-BBE9-4A56-8643-5E39E590B2A2}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{003865B1-BBE9-4A56-8643-5E39E590B2A2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{770C1712-D80F-4165-B919-BE931CE4FDCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{770C1712-D80F-4165-B919-BE931CE4FDCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{770C1712-D80F-4165-B919-BE931CE4FDCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{770C1712-D80F-4165-B919-BE931CE4FDCF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +58,7 @@ Global
 		{BB6D9C0F-D4A9-4B14-A9C1-087C381C73C4} = {D9A98959-7A2E-46E6-BCBE-7E1A98735307}
 		{9D919801-CF34-45C5-AC70-52A91DAE6A85} = {4C66D771-1AC3-48E2-B998-9CFB2347427C}
 		{003865B1-BBE9-4A56-8643-5E39E590B2A2} = {BB6D9C0F-D4A9-4B14-A9C1-087C381C73C4}
+		{770C1712-D80F-4165-B919-BE931CE4FDCF} = {4C66D771-1AC3-48E2-B998-9CFB2347427C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {2DB8F467-B2C4-486C-9F61-CA5D143B16D0}
