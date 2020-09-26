@@ -1,0 +1,8 @@
+C:\Src\tollbooth\Domain\obj\Debug\netcoreapp3.1\Domain.AssemblyInfoInputs.cache
+C:\Src\tollbooth\Domain\obj\Debug\netcoreapp3.1\Domain.AssemblyInfo.cs
+C:\Src\tollbooth\Domain\obj\Debug\netcoreapp3.1\Domain.csproj.CoreCompileInputs.cache
+C:\Src\tollbooth\Domain\bin\Debug\netcoreapp3.1\Domain.deps.json
+C:\Src\tollbooth\Domain\bin\Debug\netcoreapp3.1\Domain.dll
+C:\Src\tollbooth\Domain\bin\Debug\netcoreapp3.1\Domain.pdb
+C:\Src\tollbooth\Domain\obj\Debug\netcoreapp3.1\Domain.dll
+C:\Src\tollbooth\Domain\obj\Debug\netcoreapp3.1\Domain.pdb

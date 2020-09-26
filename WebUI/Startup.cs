@@ -12,6 +12,7 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using NSwag;
 using NSwag.Generation.Processors.Security;
+using Persistence;
 
 namespace WebUI
 {
@@ -28,6 +29,9 @@ namespace WebUI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            // Adding In Memory Database
+            services.AddPersistence(Configuration);
 
             // 2. - Service to generate Swagger 3 Documentation
             services.AddOpenApiDocument(configure =>

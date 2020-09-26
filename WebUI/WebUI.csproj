@@ -8,5 +8,9 @@
     <PackageReference Include="NSwag.AspNetCore" Version="13.7.4" />
   </ItemGroup>
 
+  <ItemGroup>
+    <ProjectReference Include="..\Persistence\Persistence.csproj" />
+  </ItemGroup>
+
 
 </Project>

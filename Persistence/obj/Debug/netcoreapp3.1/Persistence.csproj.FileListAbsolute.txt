@@ -1,0 +1,12 @@
+C:\Src\tollbooth\Persistence\bin\Debug\netcoreapp3.1\Domain.dll
+C:\Src\tollbooth\Persistence\obj\Debug\netcoreapp3.1\Persistence.AssemblyInfoInputs.cache
+C:\Src\tollbooth\Persistence\obj\Debug\netcoreapp3.1\Persistence.AssemblyInfo.cs
+C:\Src\tollbooth\Persistence\obj\Debug\netcoreapp3.1\Persistence.csprojAssemblyReference.cache
+C:\Src\tollbooth\Persistence\obj\Debug\netcoreapp3.1\Persistence.csproj.CoreCompileInputs.cache
+C:\Src\tollbooth\Persistence\bin\Debug\netcoreapp3.1\Persistence.deps.json
+C:\Src\tollbooth\Persistence\bin\Debug\netcoreapp3.1\Persistence.dll
+C:\Src\tollbooth\Persistence\bin\Debug\netcoreapp3.1\Persistence.pdb
+C:\Src\tollbooth\Persistence\bin\Debug\netcoreapp3.1\Domain.pdb
+C:\Src\tollbooth\Persistence\obj\Debug\netcoreapp3.1\Persistence.csproj.CopyComplete
+C:\Src\tollbooth\Persistence\obj\Debug\netcoreapp3.1\Persistence.dll
+C:\Src\tollbooth\Persistence\obj\Debug\netcoreapp3.1\Persistence.pdb
