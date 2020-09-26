@@ -28,6 +28,22 @@ namespace WebUI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
+
+            // 2. - Service to generate Swagger 3 Documentation
+            services.AddOpenApiDocument(configure =>
+            {
+                configure.Title = "Tollbooth";
+                // TODO: Adjust based on our Security
+                configure.OperationProcessors.Add(new OperationSecurityScopeProcessor("JWT Token"));
+                configure.DocumentProcessors.Add(
+                    new SecurityDefinitionAppender("JWT Token", Array.Empty<string>(), new OpenApiSecurityScheme
+                    {
+                        Type = OpenApiSecuritySchemeType.ApiKey,
+                        Name = "Authorization",
+                        Description = "Copy 'Bearer ' + valid JWT token into field",
+                        In = OpenApiSecurityApiKeyLocation.Header
+                    }));
+            });
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -39,6 +55,10 @@ namespace WebUI
             }
 
             app.UseHttpsRedirection();
+
+            // 2. - Register Swagger Documentation
+            app.UseOpenApi();
+            app.UseSwaggerUi3();
 
             app.UseRouting();
 
