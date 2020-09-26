@@ -2,6 +2,8 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Http;
 using Newtonsoft.Json;
+using Newtonsoft.Json.Serialization;
+using Serilog;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -48,7 +50,10 @@ namespace WebUI.Middleware
 
             if(result == string.Empty)
             {
-                result = JsonConvert.SerializeObject(new DefaultErrorMessage{ Error = exception.Message });
+                result = JsonConvert.SerializeObject(new DefaultErrorMessage{ Error = exception.Message }, new JsonSerializerSettings
+                {
+                    ContractResolver = new CamelCasePropertyNamesContractResolver()
+                });
             }
 
             return context.Response.WriteAsync(result);

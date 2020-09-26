@@ -17,7 +17,6 @@ C:\Src\tollbooth\WebUI\obj\Debug\netcoreapp3.1\WebUI.dll
 C:\Src\tollbooth\WebUI\obj\Debug\netcoreapp3.1\WebUI.pdb
 C:\Src\tollbooth\WebUI\obj\Debug\netcoreapp3.1\WebUI.genruntimeconfig.cache
 C:\Src\tollbooth\WebUI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.JsonPatch.dll
-C:\Src\tollbooth\WebUI\bin\Debug\netcoreapp3.1\Microsoft.DotNet.InternalAbstractions.dll
 C:\Src\tollbooth\WebUI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.DependencyModel.dll
 C:\Src\tollbooth\WebUI\bin\Debug\netcoreapp3.1\Microsoft.Extensions.PlatformAbstractions.dll
 C:\Src\tollbooth\WebUI\bin\Debug\netcoreapp3.1\Namotion.Reflection.dll
@@ -28,9 +27,6 @@ C:\Src\tollbooth\WebUI\bin\Debug\netcoreapp3.1\NSwag.AspNetCore.dll
 C:\Src\tollbooth\WebUI\bin\Debug\netcoreapp3.1\NSwag.Core.dll
 C:\Src\tollbooth\WebUI\bin\Debug\netcoreapp3.1\NSwag.Generation.dll
 C:\Src\tollbooth\WebUI\bin\Debug\netcoreapp3.1\NSwag.Generation.AspNetCore.dll
-C:\Src\tollbooth\WebUI\obj\Debug\netcoreapp3.1\WebUI.csproj.CoreCompileInputs.cache
-C:\Src\tollbooth\WebUI\obj\Debug\netcoreapp3.1\WebUI.MvcApplicationPartsAssemblyInfo.cs
-C:\Src\tollbooth\WebUI\obj\Debug\netcoreapp3.1\WebUI.MvcApplicationPartsAssemblyInfo.cache
 C:\Src\tollbooth\WebUI\obj\Debug\netcoreapp3.1\WebUI.csproj.CopyComplete
 C:\Src\tollbooth\WebUI\bin\Debug\netcoreapp3.1\Microsoft.Bcl.AsyncInterfaces.dll
 C:\Src\tollbooth\WebUI\bin\Debug\netcoreapp3.1\Microsoft.Bcl.HashCode.dll
@@ -56,3 +52,16 @@ C:\Src\tollbooth\WebUI\bin\Debug\netcoreapp3.1\Persistence.pdb
 C:\Src\tollbooth\WebUI\bin\Debug\netcoreapp3.1\Domain.pdb
 C:\Src\tollbooth\WebUI\bin\Debug\netcoreapp3.1\Application.dll
 C:\Src\tollbooth\WebUI\bin\Debug\netcoreapp3.1\Application.pdb
+C:\Src\tollbooth\WebUI\bin\Debug\netcoreapp3.1\Serilog.dll
+C:\Src\tollbooth\WebUI\bin\Debug\netcoreapp3.1\Serilog.Sinks.Console.dll
+C:\Src\tollbooth\WebUI\bin\Debug\netcoreapp3.1\Microsoft.DotNet.PlatformAbstractions.dll
+C:\Src\tollbooth\WebUI\bin\Debug\netcoreapp3.1\Serilog.AspNetCore.dll
+C:\Src\tollbooth\WebUI\bin\Debug\netcoreapp3.1\Serilog.Extensions.Hosting.dll
+C:\Src\tollbooth\WebUI\bin\Debug\netcoreapp3.1\Serilog.Extensions.Logging.dll
+C:\Src\tollbooth\WebUI\bin\Debug\netcoreapp3.1\Serilog.Formatting.Compact.dll
+C:\Src\tollbooth\WebUI\bin\Debug\netcoreapp3.1\Serilog.Settings.Configuration.dll
+C:\Src\tollbooth\WebUI\bin\Debug\netcoreapp3.1\Serilog.Sinks.Debug.dll
+C:\Src\tollbooth\WebUI\bin\Debug\netcoreapp3.1\Serilog.Sinks.File.dll
+C:\Src\tollbooth\WebUI\obj\Debug\netcoreapp3.1\WebUI.csproj.CoreCompileInputs.cache
+C:\Src\tollbooth\WebUI\obj\Debug\netcoreapp3.1\WebUI.MvcApplicationPartsAssemblyInfo.cs
+C:\Src\tollbooth\WebUI\obj\Debug\netcoreapp3.1\WebUI.MvcApplicationPartsAssemblyInfo.cache

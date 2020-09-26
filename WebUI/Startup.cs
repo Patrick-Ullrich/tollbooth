@@ -14,6 +14,7 @@ using Microsoft.Extensions.Logging;
 using NSwag;
 using NSwag.Generation.Processors.Security;
 using Persistence;
+using Serilog;
 using WebUI.Middleware;
 
 namespace WebUI
@@ -69,6 +70,9 @@ namespace WebUI
             // 2. - Register Swagger Documentation
             app.UseOpenApi();
             app.UseSwaggerUi3();
+
+            // 3. Add Routing To Requests
+            app.UseSerilogRequestLogging();
 
             app.UseRouting();
 

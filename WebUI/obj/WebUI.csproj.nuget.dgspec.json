@@ -240,6 +240,18 @@
             "NSwag.AspNetCore": {
               "target": "Package",
               "version": "[13.7.4, )"
+            },
+            "Serilog": {
+              "target": "Package",
+              "version": "[2.10.0, )"
+            },
+            "Serilog.AspNetCore": {
+              "target": "Package",
+              "version": "[3.4.0, )"
+            },
+            "Serilog.Sinks.Console": {
+              "target": "Package",
+              "version": "[3.1.1, )"
             }
           },
           "imports": [
