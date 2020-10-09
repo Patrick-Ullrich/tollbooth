@@ -11,7 +11,7 @@ namespace Application.Common.Interfaces
     public interface ITollBoothDBContext
     {
         DbSet<Customer> Customers { get; set; }
-
+        DbSet<ApiKey> ApiKeys { get; set; }
         Task<int> SaveChangesAsync(CancellationToken cancellationToken);
     }
 }

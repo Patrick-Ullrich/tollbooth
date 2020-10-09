@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 using Application;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.HttpsPolicy;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Configuration;
@@ -15,6 +16,7 @@ using NSwag;
 using NSwag.Generation.Processors.Security;
 using Persistence;
 using Serilog;
+using WebUI.Extensions;
 using WebUI.Middleware;
 
 namespace WebUI
@@ -33,26 +35,40 @@ namespace WebUI
         {
             services.AddControllers();
 
+            // 5. Https Redirect
+            services.AddHttpsRedirection(options =>
+            {
+                options.RedirectStatusCode = StatusCodes.Status307TemporaryRedirect;
+                options.HttpsPort = 5001;
+            });
+
             // Adding In Memory Database
             services.AddPersistence(Configuration);
 
             // Adding Application Layer
             services.AddApplication();
 
+            // Adding Authentication
+            services.AddAuthentication(options =>
+            {
+                options.DefaultAuthenticateScheme = ApiKeyAuthenticationOptions.DefaultScheme;
+                options.DefaultChallengeScheme = ApiKeyAuthenticationOptions.DefaultScheme;
+            })
+            .AddApiKeySupport(options => { });
+
             // 2. - Service to generate Swagger 3 Documentation
             services.AddOpenApiDocument(configure =>
             {
                 configure.Title = "TollBooth";
                 // TODO: Adjust based on our Security
-                configure.OperationProcessors.Add(new OperationSecurityScopeProcessor("JWT Token"));
-                configure.DocumentProcessors.Add(
-                    new SecurityDefinitionAppender("JWT Token", Array.Empty<string>(), new OpenApiSecurityScheme
-                    {
-                        Type = OpenApiSecuritySchemeType.ApiKey,
-                        Name = "Authorization",
-                        Description = "Copy 'Bearer ' + valid JWT token into field",
-                        In = OpenApiSecurityApiKeyLocation.Header
-                    }));
+                configure.OperationProcessors.Add(new OperationSecurityScopeProcessor("ApiKey"));
+                configure.AddSecurity("ApiKey", new OpenApiSecurityScheme()
+                {
+                    Type = OpenApiSecuritySchemeType.ApiKey,
+                    In = OpenApiSecurityApiKeyLocation.Header,
+                    Name = "X-Api-Key",
+                    Description = "Api Key"
+                });
             });
         }
 
@@ -62,10 +78,19 @@ namespace WebUI
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
+            } else
+            {
+                // 5. Add HTTPS
+                app.UseHsts();
             }
 
             app.UseCustomExceptionHandler();
+            // 5. Add HTTPS
             app.UseHttpsRedirection();
+
+            // 4. Authentication
+            app.UseAuthentication();
+
 
             // 2. - Register Swagger Documentation
             app.UseOpenApi();

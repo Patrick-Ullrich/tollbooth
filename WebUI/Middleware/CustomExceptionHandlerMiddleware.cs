@@ -43,12 +43,15 @@ namespace WebUI.Middleware
                 case NotFoundException _:
                     code = HttpStatusCode.NotFound;
                     break;
+                case NotAuthorizedException _:
+                    code = HttpStatusCode.Unauthorized;
+                    break;
             }
 
             context.Response.ContentType = "application/json";
             context.Response.StatusCode = (int)code;
 
-            if(result == string.Empty)
+            if (result == string.Empty)
             {
                 result = JsonConvert.SerializeObject(new DefaultErrorMessage{ Error = exception.Message }, new JsonSerializerSettings
                 {
