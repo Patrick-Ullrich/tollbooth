@@ -20,17 +20,20 @@ namespace Persistence
                         new Customer
                         {
                             CustomerId = 1,
-                            LicensePlate = "ABC123"
+                            Password = "password1",
+                            Email = "customer1@tollbooth.xyz"
                         },
                         new Customer
                         {
                             CustomerId = 2,
-                            LicensePlate = "DEF123"
+                            Password = "password2",
+                            Email = "customer2@tollbooth.xyz"
                         },
                         new Customer
                         {
                             CustomerId = 3,
-                            LicensePlate = "GHI123"
+                            Password = "password3",
+                            Email = "customer3@tollbooth.xyz"
                         }
                     );
                 }
@@ -43,6 +46,30 @@ namespace Persistence
                             ApiKeyId = 1,
                             Key = "f0e99ca6-b79d-4c9c-ab43-5839c323ea6d",
                             Name = "Government"
+                        }
+                    );
+                }
+
+                if(!context.Vehicles.Any())
+                {
+                    context.Vehicles.AddRange(
+                        new Vehicle
+                        {
+                            VehicleId = 1,
+                            CustomerId = 1,
+                            LicensePlate = "A1A 1A1"
+                        },
+                        new Vehicle
+                        {
+                            VehicleId = 2,
+                            CustomerId = 1,
+                            LicensePlate = "B1B 1B1"
+                        },
+                        new Vehicle
+                        {
+                            VehicleId = 3,
+                            CustomerId = 2,
+                            LicensePlate = "A2A 2A2"
                         }
                     );
                 }

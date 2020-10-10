@@ -1,7 +1,9 @@
 ﻿using Application.Common.Abstracts;
+using AutoMapper;
 using Microsoft.Extensions.DependencyInjection;
 using System;
 using System.Collections.Generic;
+using System.Reflection;
 using System.Text;
 
 namespace Application
@@ -10,6 +12,7 @@ namespace Application
     {
         public static IServiceCollection AddApplication(this IServiceCollection services)
         {
+            services.AddAutoMapper(Assembly.GetExecutingAssembly());
 
             var assembly = typeof(DependencyInjection).Assembly;
             foreach (var type in assembly.GetTypes())
@@ -19,6 +22,7 @@ namespace Application
                     services.AddTransient(type);
                 }
             }
+
 
             return services;
         }

@@ -62,6 +62,10 @@ C:\Src\tollbooth\WebUI\bin\Debug\netcoreapp3.1\Serilog.Formatting.Compact.dll
 C:\Src\tollbooth\WebUI\bin\Debug\netcoreapp3.1\Serilog.Settings.Configuration.dll
 C:\Src\tollbooth\WebUI\bin\Debug\netcoreapp3.1\Serilog.Sinks.Debug.dll
 C:\Src\tollbooth\WebUI\bin\Debug\netcoreapp3.1\Serilog.Sinks.File.dll
+C:\Src\tollbooth\WebUI\bin\Debug\netcoreapp3.1\AutoMapper.dll
+C:\Src\tollbooth\WebUI\bin\Debug\netcoreapp3.1\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+C:\Src\tollbooth\WebUI\bin\Debug\netcoreapp3.1\Microsoft.AspNetCore.Mvc.NewtonsoftJson.dll
+C:\Src\tollbooth\WebUI\bin\Debug\netcoreapp3.1\Newtonsoft.Json.Bson.dll
 C:\Src\tollbooth\WebUI\obj\Debug\netcoreapp3.1\WebUI.csproj.CoreCompileInputs.cache
 C:\Src\tollbooth\WebUI\obj\Debug\netcoreapp3.1\WebUI.MvcApplicationPartsAssemblyInfo.cs
 C:\Src\tollbooth\WebUI\obj\Debug\netcoreapp3.1\WebUI.MvcApplicationPartsAssemblyInfo.cache
